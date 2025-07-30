@@ -188,7 +188,7 @@
               >
                 <div class="relative">
                   <div
-                    class="mb-2 text-4xl font-bold text-transparent transition-transform duration-300 lg:text-5xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text group-hover:scale-110"
+                    class="mb-2 text-3xl lg:text-4xl font-bold text-transparent transition-transform duration-300 lg:text-5xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text group-hover:scale-110"
                   >
                     <span ref="statNumbers">{{ animatedStats[index] }}</span
                     >{{ stat.suffix }}
@@ -207,7 +207,7 @@
           </div>
 
           <!-- Enhanced Hero Visual -->
-          <div class="relative" v-motion-fade-visible>
+          <div class="relative mt-[8rem] lg:mt-0" v-motion-fade-visible>
             <div class="absolute inset-0 -top-[200px] z-0">
               <svg
                 class="animated"
@@ -1556,9 +1556,9 @@
               >
                 <div class="flex items-center mb-6 space-x-4">
                   <div
-                    class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl"
+                    class="flex items-center justify-center w-8 h-8 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl"
                   >
-                    <CodeIcon class="w-8 h-8 text-white" />
+                    <CodeIcon class="w-4 h-4 lg:w-8 lg:h-8 text-white" />
                   </div>
                   <div>
                     <h3
@@ -1593,7 +1593,7 @@
 
               <!-- Floating elements -->
               <div
-                class="absolute w-24 h-24 transition-transform duration-300 transform -top-4 -right-4 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl opacity-80 rotate-12 hover:rotate-0"
+                class="absolute w-16 h-16 lg:w-24 lg:h-24 transition-transform duration-300 transform -top-4 -right-4 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl opacity-80 rotate-12 hover:rotate-0"
                 style="animation: float 6s ease-in-out infinite 2s"
               >
                 <div class="flex items-center justify-center w-full h-full">
@@ -1602,7 +1602,7 @@
               </div>
 
               <div
-                class="absolute w-20 h-20 transition-transform duration-300 transform -bottom-6 -left-6 bg-gradient-to-br from-green-400 to-emerald-400 rounded-2xl opacity-80 -rotate-12 hover:rotate-0"
+                class="absolute w-16 h-16 lg:w-20 lg:h-20 transition-transform duration-300 transform -bottom-6 -left-6 bg-gradient-to-br from-green-400 to-emerald-400 rounded-2xl opacity-80 -rotate-12 hover:rotate-0"
                 style="animation: float 6s ease-in-out infinite 4s"
               >
                 <div class="flex items-center justify-center w-full h-full">
@@ -2197,7 +2197,9 @@
                 </div>
                 <div>
                   <div class="font-semibold text-gray-800">Email Us</div>
-                  <div class="text-gray-600">tech.talenttrainers@gmail.com</div>
+                  <div class="text-gray-600">
+                    tech.talenttraininers@gmail.com
+                  </div>
                 </div>
               </div>
 
@@ -2304,17 +2306,43 @@
               <div
                 class="flex items-center justify-center w-10 h-10 transition-colors duration-200 bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-700"
               >
-                <span class="text-sm font-bold">f</span>
+                <span class="text-sm font-bold"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-linkedin-icon lucide-linkedin"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" /></svg
+                ></span>
               </div>
               <div
                 class="flex items-center justify-center w-10 h-10 transition-colors duration-200 bg-blue-400 rounded-lg cursor-pointer hover:bg-blue-500"
               >
-                <span class="text-sm font-bold">t</span>
-              </div>
-              <div
-                class="flex items-center justify-center w-10 h-10 transition-colors duration-200 bg-blue-700 rounded-lg cursor-pointer hover:bg-blue-800"
-              >
-                <span class="text-sm font-bold">in</span>
+                <span class="text-sm font-bold"
+                  ><svg
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    height="24px"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M8 2H1l8.26 11.015L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886zm9 18L5 4h2l12 16z"
+                    />
+                  </svg>
+                </span>
               </div>
             </div>
           </div>
@@ -2352,7 +2380,7 @@
               Contact Info
             </h4>
             <div class="space-y-2 text-gray-300">
-              <p>tech.talenttrainers@gmail.com</p>
+              <p>tech.talenttraininers@gmail.com</p>
               <p>+447 547 797 067</p>
               <p>+234 906 348 1249</p>
             </div>
