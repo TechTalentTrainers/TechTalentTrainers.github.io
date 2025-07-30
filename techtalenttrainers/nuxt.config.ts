@@ -25,13 +25,16 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: "2025-07-15",
+  content: {
+    experimental: { nativeSqlite: true },
+  },
   devtools: { enabled: true },
   css: ["../assets/styles/app.css", "../assets/styles/base.scss"],
   vite: {
     plugins: [tsconfigPaths(), tailwindcss()],
   },
   modules: [
-    // "@nuxt/content",
+    "@nuxt/content",
     "@nuxt/fonts",
     "@nuxt/eslint",
     "@nuxt/icon",
