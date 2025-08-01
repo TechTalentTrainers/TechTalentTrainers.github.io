@@ -1,5 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import path from 'path';
 
 export default defineNuxtConfig({
   app: {
@@ -32,6 +33,14 @@ export default defineNuxtConfig({
   css: ["../assets/styles/app.css", "../assets/styles/base.scss"],
   vite: {
     plugins: [tsconfigPaths(), tailwindcss()],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+        '~': path.resolve(__dirname, '.'),
+        // // Or if your assets folder is at the root
+        // '~/assets': path.resolve(__dirname, './assets'),
+      }
+    }
   },
   modules: [
     "@nuxt/content",
