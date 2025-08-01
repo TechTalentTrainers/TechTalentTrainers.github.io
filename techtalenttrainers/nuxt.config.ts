@@ -44,11 +44,11 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxt/content",
-    "@nuxt/fonts",
+    // "@nuxt/fonts",
     "@nuxt/eslint",
     "@nuxt/icon",
     "@nuxt/image",
-    "@nuxt/ui",
+    // "@nuxt/ui",
   ],
   image: {},
   future: {
