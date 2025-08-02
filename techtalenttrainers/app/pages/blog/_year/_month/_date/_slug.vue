@@ -1,5 +1,9 @@
 <template>
-  <div class="min-h-screen overflow-x-hidden bg-white">
+  <div v-if="pending">Loading post...</div>
+
+  <div v-else-if="error">An error occurred: {{ error.message }}</div>
+
+  <div class="min-h-screen overflow-x-hidden bg-white" v-else-if="post">
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg">
       <div class="container px-6 py-4 mx-auto">
@@ -48,7 +52,7 @@
       <article class="max-w-4xl mx-auto">
         <header class="mb-12 text-center">
           <h1 class="mb-4 text-4xl font-bold text-gray-900">
-            {{ post.title }}
+            {{ post }}
           </h1>
           <div class="flex justify-center mb-8 space-x-4">
             <span class="text-gray-500">{{ formatDate(post.date) }}</span>
@@ -197,28 +201,34 @@
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData({ params, $content }) {
-    // const { year, month, date, slug } = params;
-    // const path = `/blog/${year}/${month}/${date}/${slug}`;
-    // const post = await $content(path).fetch();
+<script setup>
+import { useRoute, useAsyncData } from "#app";
 
-    const post = {
-      category: "fun",
-      title: "The Wind in The Willows",
-      date: "1999-06-07",
-      content: "Lorem ipsum dolor sit amet",
-    };
+const { params } = useRoute();
 
-    return { post };
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      return new Date(date).toLocaleDateString("en", options);
-    },
-  },
+const {
+  data: post,
+  pending,
+  error,
+} = await useAsyncData("blog-post", () => {
+  // Your data fetching logic would go here, for example:
+  // const { year, month, date, slug } = params;
+  // const path = `/blog/${year}/${month}/${date}/${slug}`;
+  // return $content(path).fetch();
+    
+  // We'll use your placeholder data for demonstration.
+  return {
+    category: "fun",
+    title: "The Wind in The Willows",
+    date: "1999-06-07",
+    content: "Lorem ipsum dolor sit amet",
+    image: '',
+  };
+});
+
+const formatDate = (date) => {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return new Date(date).toLocaleDateString("en", options);
 };
 </script>
 

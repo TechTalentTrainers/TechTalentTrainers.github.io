@@ -7,17 +7,21 @@
     <div class="container px-6 py-4 mx-auto">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-3 group">
-          <div class="relative">
-            <div
-              class="w-10 h-10 transition-transform duration-300 transform shadow-lg bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl rotate-12 group-hover:rotate-0"
-            ></div>
-            <div
-              class="absolute inset-0 w-10 h-10 transition-opacity duration-300 opacity-50 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-xl blur group-hover:opacity-75"
-            ></div>
-            <div class="absolute inset-[15px] flex items-center justify-center">
-              <div class="scale-[0.20]" v-html="TTTLogo"></div>
+          <a href="/">
+            <div class="relative">
+              <div
+                class="w-10 h-10 transition-transform duration-300 transform shadow-lg bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl rotate-12 group-hover:rotate-0"
+              ></div>
+              <div
+                class="absolute inset-0 w-10 h-10 transition-opacity duration-300 opacity-50 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-xl blur group-hover:opacity-75"
+              ></div>
+              <div
+                class="absolute inset-[15px] flex items-center justify-center"
+              >
+                <div class="scale-[0.20]" v-html="TTTLogo"></div>
+              </div>
             </div>
-          </div>
+          </a>
           <div>
             <span
               class="text-xl font-bold text-transparent bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text"
@@ -30,45 +34,45 @@
         </div>
 
         <nav class="items-center hidden space-x-8 lg:flex">
-          <a
-            href="#"
+          <NuxtLink
+            to="/"
             class="relative font-medium text-gray-700 transition-colors duration-200 hover:text-blue-600 group"
           >
             Home
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"
             ></span>
-          </a>
-          <a
-            href="#mission"
+          </NuxtLink>
+          <NuxtLink
+            to="/#mission"
             class="relative font-medium text-gray-700 transition-colors duration-200 hover:text-blue-600 group"
           >
             Our Mission
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"
             ></span>
-          </a>
-          <a
-            href="#contact"
+          </NuxtLink>
+          <NuxtLink
+            to="/#contact"
             class="relative font-medium text-gray-700 transition-colors duration-200 hover:text-blue-600 group mr-[20px]"
           >
             Work with Us
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"
             ></span>
-          </a>
-          <div class="border-l-2  border-blue-500 pl-4 w-0 h-[2rem] mx-0">
-            
-          </div>
-          <a
-            href="#contact"
+          </NuxtLink>
+          <div
+            class="border-l-2 border-blue-500 pl-4 w-0 h-[2rem] mx-0 opacity-20"
+          ></div>
+          <NuxtLink
+            to="/blog/"
             class="relative font-medium text-gray-700 transition-colors duration-200 hover:text-blue-600 group"
           >
             Blog
             <span
               class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"
             ></span>
-          </a>
+          </NuxtLink>
           <button
             class="px-8 py-3 font-semibold text-white transition-all duration-300 rounded-full shadow-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 hover:scale-105 hover:shadow-xl"
           >
