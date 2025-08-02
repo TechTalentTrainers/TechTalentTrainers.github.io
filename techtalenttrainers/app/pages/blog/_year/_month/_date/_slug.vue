@@ -17,13 +17,13 @@
             <NuxtLink to="/" class="text-gray-700 hover:text-blue-600"
               >Home</NuxtLink
             >
-            <NuxtLink to="/about" class="text-gray-700 hover:text-blue-600"
+            <NuxtLink to="/#mission" class="text-gray-700 hover:text-blue-600"
               >About</NuxtLink
             >
             <NuxtLink to="/blog" class="text-blue-600 font-semibold"
               >Blog</NuxtLink
             >
-            <NuxtLink to="/contact" class="text-gray-700 hover:text-blue-600"
+            <NuxtLink to="/#contact" class="text-gray-700 hover:text-blue-600"
               >Contact</NuxtLink
             >
           </div>
@@ -125,7 +125,7 @@
                 >
               </li>
               <li>
-                <NuxtLink to="/about" class="text-gray-400 hover:text-white"
+                <NuxtLink to="/#mission" class="text-gray-400 hover:text-white"
                   >About</NuxtLink
                 >
               </li>
@@ -135,7 +135,7 @@
                 >
               </li>
               <li>
-                <NuxtLink to="/contact" class="text-gray-400 hover:text-white"
+                <NuxtLink to="/#contact" class="text-gray-400 hover:text-white"
                   >Contact</NuxtLink
                 >
               </li>
